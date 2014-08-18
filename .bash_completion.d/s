@@ -1,0 +1,6 @@
+_s()
+{
+	local cur=${COMP_WORDS[COMP_CWORD]}
+	COMPREPLY=($(compgen -W "$(ls ~/sites)" -- $cur))
+}
+complete -F _s s
